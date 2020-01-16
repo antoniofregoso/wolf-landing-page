@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from odoo import server
 from config import Config      
 
@@ -10,7 +10,10 @@ app.config.from_object(Config)
 @app.route('/index')
 def index():
     test = server().connection()
-    return render_template('index.html', user = test)
+    qs = request.args
+    return render_template('index.html', user = test, q=qs)
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
+    
