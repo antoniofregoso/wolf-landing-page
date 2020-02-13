@@ -1,4 +1,5 @@
 import configparser
+import xmlrpc.client
 
 class server:
     
@@ -9,7 +10,9 @@ class server:
         dbname = config['odoo']['dbname']
         user  = config['odoo']['user']
         pwd = config['odoo']['pwd']
-        return {'host':host, 'dbname':dbname, 'user':user, 'pwd':pwd}
+        info = xmlrpc.client.ServerProxy(host).start()
+        common = xmlrpc.client.ServerProxy('{}/xmlrpc/2/common'.format(host))
+        return common.version()
         
         
         
