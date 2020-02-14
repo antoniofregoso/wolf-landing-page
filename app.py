@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash, redirect
+from flask import Flask, render_template, request, flash, redirect, url_for
 from models.odoo import server
 from config import Config    
 from models.forms import LoginForm  , LeadForm
@@ -12,17 +12,18 @@ app.config.from_object(Config)
 def index():
     user = {'username': 'Miguel'}
     qs = request.args
-    test = server().connection(app.config['ODOO'])
+    #test = server().connection(app.config['ODOO'])
+    test = 'Puto'
     form = LeadForm()
     if form.validate_on_submit():
-        return redirect('/gracias.html')
-    
-    return render_template('index.html', title='Home', user=user,q=test, form=form)
+        return redirect(url_for('.gracias'))
+    return render_template('index.html', title='Home', user=user, q=test, form=form)
 
-@app.route('/gracias')
+@app.route('/gracias', methods=['GET', 'POST'])
 def gracias():
     if request.method == 'POST':
-        return 'Exito'
+        username = request.form["name"]
+        return render_template('login.html', title='Sign In')
     return 'Puto'
 
 @app.route('/login', methods=['GET', 'POST'])
