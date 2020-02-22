@@ -5,28 +5,36 @@
         {% else %}
         <title>microblog</title>
         {% endif %}
-       <link rel="stylesheet" href="static/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="static/css/bootstrap.min.css" /> 
+       <!--   <link rel="stylesheet" href="static/css/wolf-theme.css" /> -->
         <link rel="stylesheet" href="static/css/all.min.css" />
+        <link rel="stylesheet" href="static/css/animate.min.css" />
+        <link rel="stylesheet" href="static/css/baguetteBox.css" />
+        <link rel="stylesheet" href="static/css/wolf.css" />
     </head>
     <body>
-        <div>
-            Microblog:
-            <a href="/index">Home</a>
-            <a href="/login">Login</a>
-        </div>
-        <hr>
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        <ul>
-            {% for message in messages %}
-            <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-        {% endwith %}
+    <nav class="navbar nav-wolf">
+    	<ul class="navbar-nav">
+    		<li class="nav-item wolf-item"><a class="nav-link" href="#start"><i class="fas fa-2x fa-home"></i> <span class="wolf-hide">Inicio</span></a></li>
+    		<li class="nav-item"><a class="nav-link"  href="#servicios"><i class="fas fa-2x fa-tasks"></i><span class="wolf-hide"> Servicios</span></a></li>
+    		<li class="nav-item"><a class="nav-link"  href="#amenidades"><i class="fas fa-2x fa-couch"></i><span class="wolf-hide"> Amenidades</span></a></li>
+    		<li class="nav-item"><a class="nav-link"  href="#planes"><i class="fas fa-2x fa-money-check-alt"></i><span class="wolf-hide"> Planes</span></a></li>
+    		<li class="nav-item"><a class="nav-link"  href="#mapa"><i class="fas fa-2x fa-map-marker-alt"></i><span class="wolf-hide"> Ubicación</span></a></li>
+    		<li class="nav-item"><a class="nav-link"  href="#contacto"><i class="fas fa-2x fa-envelope"></i><span class="wolf-hide"> Contacto</span></a></li>
+    	</ul>
+    </nav>
         {% block content %}{% endblock %}
+        <footer>
+        
+        </footer>
         <script src="static/js/jquery-3.4.1.min.js"></script>
         <script src="static/js/popper.min.js"></script>
         <script src="static/js/bootstrap.min.js"></script>
+        <script src="static/js/baguetteBox.min.js"></script>
+		 <script src="static/js/wolf.js"></script>
+		<script>
+			baguetteBox.run('.baguetteBox', {captions: true, overlayBackgroundColor:'rgba(255,0,0,0.8)', fullScreen: true});
+		</script>
+</body>
     </body>
 </html>

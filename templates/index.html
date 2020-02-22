@@ -1,17 +1,181 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Hi, {{ user.username }}!</h1>
-    <p>{{q}}</p>
-    <p>{{prueba}}</p>
+<!-- Header section -->
+<header id="start">
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+  </video>
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-3" data-animation="zoomIn">Video Header</h1>
+        <p class="lead mb-0"  data-animation="fadeInUp">With HTML5 Video and Bootstrap 4</p>
+      </div>
+    </div>
+  </div>
+</header>
 
-    
-    <section>
+<!-- end of header container -->
+
+<!-- Services section -->
+<section id="servicios">
+<div class="container ">
+<h2 class="text-center" data-animation="zoomIn">Servicios</h2>
+	<div class="row text-center">
+      <div class="col-lg-4" data-animation="slideInLeft">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <h2>Heading</h2>
+        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+      
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <h2>Heading</h2>
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+       
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4" data-animation="slideInRight">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <h2>Heading</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        
+      </div><!-- /.col-lg-4 --><div class="col-lg-4" data-animation="slideInLeft">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <h2>Heading</h2>
+        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+      
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <h2>Heading</h2>
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+       
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4" data-animation="slideInRight">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <h2>Heading</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+</div>
+</section >
+<!-- Galery section -->
+<section id="amenidades">
+<div class="container-fluid">
+	<h2 class="text-center" data-animation="zoomIn">Amenidades</h2>
+		<div class="row baguetteBox">
+			<div class="col-sm-6 col-md-4 col-lg-3 item">
+				<a href="static/img/2-1.jpg" data-at-450="static/img/thumbs/2-1.jpg" data-at-800="static/img/small/2-1.jpg" data-at-1366="static/img/medium/2-1.jpg" data-at-1920="static/img/big/2-1.jpg" data-caption="<h2>Caption 1</h2><p>Tu crees</p>">
+		            <img class="img-fluid img-thumbnail" src="static/img/thumbs/2-1.jpg" title="Esto es una prueba<br>Puto">
+		        </a>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3 item">
+				 <a href="static/img/2-2.jpg" data-at-450="static/img/thumbs/2-2.jpg" data-at-800="static/img/small/2-2.jpg" data-at-1366="static/img/medium/2-2.jpg" data-at-1920="static/img/big/2-2.jpg">
+		            <img class="img-fluid img-thumbnail" src="static/img/thumbs/2-2.jpg" alt="alt texto" title="title aaaa">
+		        </a>
+			
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3 item">
+				<a href="static/img/2-3.jpg" data-at-450="static/img/thumbs/2-3.jpg" data-at-800="static/img/small/2-3.jpg" data-at-1366="static/img/medium/2-3.jpg" data-at-1920="static/img/big/2-3.jpg">
+		            <img class="img-fluid img-thumbnail" src="static/img/thumbs/2-3.jpg" alt="">
+		        </a>
+			
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3 item">
+				<a href="static/img/2-4.jpg" data-at-450="static/img/thumbs/2-4.jpg" data-at-800="static/img/small/2-4.jpg" data-at-1366="static/img/medium/2-4.jpg" data-at-1920="static/img/big/2-4.jpg">
+		            <img class="img-fluid img-thumbnail" src="static/img/thumbs/2-4.jpg" alt="">
+		        </a>
+			
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3 item">
+				<a href="static/img/2-4.jpg" data-at-450="static/img/thumbs/2-4.jpg" data-at-800="static/img/small/2-4.jpg" data-at-1366="static/img/medium/2-4.jpg" data-at-1920="static/img/big/2-4.jpg">
+		            <img class="img-fluid img-thumbnail" src="static/img/thumbs/2-4.jpg" alt="">
+		        </a>
+			
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3 item">
+				<a href="static/img/2-4.jpg" data-at-450="static/img/thumbs/2-4.jpg" data-at-800="static/img/small/2-4.jpg" data-at-1366="static/img/medium/2-4.jpg" data-at-1920="static/img/big/2-4.jpg">
+		            <img class="img-fluid img-thumbnail" src="static/img/thumbs/2-4.jpg" alt="">
+		        </a>
+			
+			</div>
+    </div><!-- End Row -->
+</div>
+</section >
+<!-- Plans  section -->
+<section id="planes">
+<div class="container ">
+<h2 class="text-center" data-animation="zoomIn">Planes</h2>
+	<div class="card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm" data-animation="slideInLeft">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Free</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>10 users included</li>
+          <li>2 GB of storage</li>
+          <li>Email support</li>
+          <li>Help center access</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Pro</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>20 users included</li>
+          <li>10 GB of storage</li>
+          <li>Priority email support</li>
+          <li>Help center access</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm" data-animation="slideInRight">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Enterprise</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>30 users included</li>
+          <li>15 GB of storage</li>
+          <li>Phone and email support</li>
+          <li>Help center access</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+      </div>
+    </div>
+</div>
+</div>
+</section >
+<!-- Map section -->
+<section id="mapa">
+<div class="container-fluid ">
+<h2 class="text-center" data-animation="zoomIn">Ubicación</h2>
+	<div class="row">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7979.058065897415!2d-99.21328975742398!3d19.299147488374764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xefe71e50f663442e!2sConference%20Corporativo%2C%20S.C.!5e0!3m2!1ses-419!2smx!4v1582056047109!5m2!1ses-419!2smx" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	</div>
+</div>
+</section>
+ <!--  Form section -->   
+    <section id="contacto">
     	<div class="container">
-    			<h2>Escríbenos</h2>
+    			<h2 class="text-center" data-animation="zoomIn">Escríbenos</h2>
     		<div class="row">
-    			<div class="col-8">
-    			 <form action="" method="post" novalidate  >
+    			<div class="col-8" data-animation="slideInLeft">
+    			 <form action="{{url_for('gracias')}}" method="post"   >
+    			 	 {{ form.csrf }}
     				 <div class="form-row">
     				 	   <div class="form-group col-md-6">
     				 	   		<label for="name">{{ form.name.label }}</label>
@@ -53,10 +217,15 @@
     				 </div>
     				 <div class="form-row mt-4">
     				 	{{ form.submit(class_="btn btn-primary") }}
+    				 	{{form.utm_campaign}}
+    				 	{{form.utm_source}}
+    				 	{{form.utm_medium}}
+    				 	{{form.utm_content}}
+    				 	{{form.utm_term}}
     				 </div>
     			</form>
     			</div>
-    			<div class="col-4">
+    			<div class="col-4"  data-animation="slideInRight">
     				<div class="media">
     					<span class="mr-3" ><i class="fas fa-2x fa-map-marker-alt"></i></span>
     					  <div class="media-body">

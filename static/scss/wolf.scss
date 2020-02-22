@@ -1,0 +1,21 @@
+
+/* -------sass scss/wolf.scss:css/wolf-theme.css-------- */
+/* -------sass --watch scss/main.scss:css/wholf-theme.css-------- */
+/* import only the necessary Bootstrap files */
+
+/* -------begin customization-------- */
+$primary: #000000;
+$danger: #dd0000;
+$success: lime;
+$warning: orange;
+$info: aqua;
+$light:;
+$dark:;
+
+$body-bg: #00ff00;
+
+$enable-rounded: true;
+
+// Bootstrap and its default variables
+@import "bootstrap/scss/bootstrap";
+

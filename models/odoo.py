@@ -2,13 +2,24 @@ import xmlrpc.client
 
 class server:
     
-    def connection(self, odoo):
-        host = odoo['host']
+   
+    def set_lead(self,odoo, values):
+        url = odoo['host']
         db = odoo['dbname']
         username  = odoo['user']
         password = odoo['pwd']
-        common = xmlrpc.client.ServerProxy('{}/xmlrpc/2/common'.format(host))
-        return common.version()
+        models = xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(url))
+        id = models.execute_kw(db, 1, password, 'res.partner', 'create', [values])
+        return id
+        
+    def set_opportunity(self,odoo, values):
+        url = odoo['host']
+        db = odoo['dbname']
+        username  = odoo['user']
+        password = odoo['pwd']
+        return 'd'
+        
+        
         
         
         
