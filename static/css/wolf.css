@@ -53,21 +53,15 @@ header .overlay {
 	margin-left: 10px;
 	position:fixed; 	
 	border-radius:15px;
+	width: 65px;
 	background-color: rgba(255,255,255,0.50);
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 	z-index: 10;
 }
 
-.base-wolf {
-	width: 65px;
-	
-}
-.base-wolf span{
-	display: none;
-}
 
-.base-wolf-over {
-	width: auto;
+.over-wolf {
+	
 }
 
 .item-wolf {
