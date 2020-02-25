@@ -21,3 +21,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 	});
 });
 
+
+function wolfNav() {
+	$(".nav-wolf ").removeClass('base-wolf').addClass('base-wolf-over animated slideInLeft');
+	}
