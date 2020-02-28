@@ -1,9 +1,9 @@
 <html>
     <head>
         {% if title %}
-        <title>{{ title }} - microblog</title>
+        <title>{{ title }} - Wolf Landing Page</title>
         {% else %}
-        <title>microblog</title>
+        <title>landing page</title>
         {% endif %}
       <link rel="stylesheet" href="static/css/bootstrap.min.css" /> 
        <!--   <link rel="stylesheet" href="static/css/wolf-theme.css" /> -->
@@ -13,44 +13,36 @@
         <link rel="stylesheet" href="static/css/wolf.css" />
     </head>
     <body>
-    <nav class="navbar nav-wolf">
-	    <div class="over-wolf" id="nav-wolf">
+    <nav class="navbar nav-wolf d-none d-sm-none d-md-block">
+	    <div class="dock-wolf" id="nav-wolf">
 	    	<ul class="navbar-nav">
 	    		<li class="nav-item"><a class="nav-link" href="#start"><i class="fas fa-2x fa-home item-wolf"></i> <span >Inicio</span></a></li>
 	    		<li class="nav-item"><a class="nav-link"  href="#servicios"><i class="fas fa-2x fa-tasks item-wolf"></i><span > Servicios</span></a></li>
 	    		<li class="nav-item"><a class="nav-link"  href="#amenidades"><i class="fas fa-2x fa-couch item-wolf"></i><span > Amenidades</span></a></li>
 	    		<li class="nav-item"><a class="nav-link"  href="#planes"><i class="fas fa-2x fa-money-check-alt item-wolf"></i><span > Planes</span></a></li>
 	    		<li class="nav-item"><a class="nav-link"  href="#mapa"><i class="fas fa-2x fa-map-marker-alt item-wolf"></i><span > Ubicación</span></a></li>
-	    		<li class="nav-item"><a class="nav-link"  href="#contacto"><i class="fas fa-2x fa-envelope item-wolf"></i><span > Contacto</span></a></li>
+	    		<li class="nav-item"><a class="nav-link"  href="#contacto"><i class="fas fa-2x fa-envelope item-wolf"></i><span> Contacto</span></a></li>
 	    	</ul>
 	    </div>
     </nav>
         {% block content %}{% endblock %}
         
         
-        <div class="st-event-actionContainer right-bottom">
+        <div class="st-event-actionContainer right-bottom d-block d-sm-block d-md-none">
         	<div class="st-event-panel">
-				<div class="st-event-panel-header"><i class="fa fa-bars" aria-hidden="true"></i> Menu</div>
-				<div class="st-event-panel-contents">
-					Put menu or icon links here!<br /><br />
-					Or make a grid:
-				</div>
-				<div class="grid">
-						<a href="#" class="gridChild"><i class="fa fa-cubes" aria-hidden="true"></i></a>
-						<a href="#" class="gridChild"><i class="fa fa-database" aria-hidden="true"></i></a>
-						<a href="#" class="gridChild"><i class="fa fa-send" aria-hidden="true"></i></a>
-						<a href="#" class="gridChild"><i class="fa fa-tag" aria-hidden="true"></i></a>
-						<a href="#" class="gridChild"><i class="fa fa-trophy" aria-hidden="true"></i></a>
-						<a href="#" class="gridChild"><i class="fa fa-user" aria-hidden="true"></i></a>
-						<a href="#" class="gridChild"><i class="fa fa-file" aria-hidden="true"></i></a>
-						<a href="#" class="gridChild"><i class="fa fa-table" aria-hidden="true"></i></a>
-						<a href="#" class="gridChild"><i class="fa fa-eject" aria-hidden="true"></i></a>
-					</div>        		
+        		<ul class="navbar-nav p-2">
+		    		<li class="nav-item"><a class="nav-link" href="#start"><i class="fas fa-2x fa-home item-wolf"></i> <span >Inicio</span></a></li>
+		    		<li class="nav-item"><a class="nav-link"  href="#servicios"><i class="fas fa-2x fa-tasks item-wolf"></i><span > Servicios</span></a></li>
+		    		<li class="nav-item"><a class="nav-link"  href="#amenidades"><i class="fas fa-2x fa-couch item-wolf"></i><span > Amenidades</span></a></li>
+		    		<li class="nav-item"><a class="nav-link"  href="#planes"><i class="fas fa-2x fa-money-check-alt item-wolf"></i><span > Planes</span></a></li>
+		    		<li class="nav-item"><a class="nav-link"  href="#mapa"><i class="fas fa-2x fa-map-marker-alt item-wolf"></i><span > Ubicación</span></a></li>
+		    		<li class="nav-item"><a class="nav-link"  href="#contacto"><i class="fas fa-2x fa-envelope item-wolf"></i><span> Contacto</span></a></li>
+	    	</ul>    		
         	</div>
-        	<div class="st-event-btn-container right-bottom">
+        	<div class="st-event-btn-container right-bottom bg-primary">
 				<div class="st-event-button-main"><i class="fa fa-bars" aria-hidden="true"></i></div>
 			</div>
-        </div>
+        </div>  
         <footer>
         
         </footer>
@@ -60,7 +52,10 @@
         <script src="static/js/baguetteBox.min.js"></script>
 		 <script src="static/js/wolf.js"></script>
 		<script>
-			$(".nav-wolf").hover(function(){
+			$(document).ready(function(){
+				$('st-event-actionContainer').launchBtn( { openDuration: 500, closeDuration: 300 } );
+			});
+			$("#nav-wolf").click(function(){
 				wolfNav();
 			});
 			baguetteBox.run('.baguetteBox', {captions: true, overlayBackgroundColor:'rgba(255,0,0,0.8)', fullScreen: true});

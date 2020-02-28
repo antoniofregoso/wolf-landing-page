@@ -18,6 +18,8 @@ class server:
         username  = odoo['user']
         password = odoo['pwd']
         return 'd'
+    
+    
         
         
         
