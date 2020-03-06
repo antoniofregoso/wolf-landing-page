@@ -26,6 +26,7 @@ def index():
 
 @app.route('/gracias', methods=['GET', 'POST'])
 def gracias():
+    theme = bool(app.config['OPTIONS']['wolf_theme'])
     if request.method == 'POST':
         form = request.form
         lead = {}    
@@ -94,16 +95,18 @@ def gracias():
         else:
             lead['partner_id'] = crm.create_object(app.config['ODOO'],'res.partner', partner)
             lead_id = crm.create_object(app.config['ODOO'],'crm.lead', lead)        
-        return render_template('lead.html', title='Solicitus Enviada', name= form['name'])
+        return render_template('lead.html', theme=theme, title='Solicitus Enviada', name= form['name'])
        
     else:
         return redirect(url_for('error'))
 
 @app.route('/error')
 def error():
-    return render_template('error.html', title='Error')
+    theme = bool(app.config['OPTIONS']['wolf_theme'])
+    return render_template('error.html', theme=theme, title='Error')
 
 @app.route('/theme')
 def theme():
-    return render_template('theme.html', title='Theme')
+    theme = bool(app.config['OPTIONS']['wolf_theme'])
+    return render_template('theme.html', theme=theme, title='Theme')
     
