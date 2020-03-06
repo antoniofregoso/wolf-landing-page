@@ -21,7 +21,7 @@
 
 <!-- Services section -->
 <section id="servicios">
-<div class="container ">
+<div class="container mt-4">
 <h2 class="text-center" data-animation="zoomIn">Servicios</h2>
 	<div class="row text-center">
       <div class="col-12 col-sm-6 col-lg-4" data-animation="slideInLeft">
@@ -66,7 +66,7 @@
 </section >
 <!-- Galery section -->
 <section id="amenidades">
-<div class="container-fluid">
+<div class="container-fluid  mt-4">
 	<h2 class="text-center" data-animation="zoomIn">Amenidades</h2>
 		<div class="row baguetteBox">
 			<div class="col-sm-6 col-md-4 col-lg-3 item">
@@ -109,7 +109,7 @@
 </section >
 <!-- Plans  section -->
 <section id="planes">
-<div class="container ">
+<div class="container mt-4">
 <h2 class="text-center" data-animation="zoomIn">Planes</h2>
 	<div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 text-center">
 		<div class="col mb-4">
@@ -177,7 +177,7 @@
 </section>
  <!--  Form section -->   
     <section id="contacto">
-    	<div class="container">
+    	<div class="container  mt-4">
     			<h2 class="text-center" data-animation="zoomIn">Escríbenos</h2>
     		<div class="row">
     			<div class="col-sm-12 col-md-8" data-animation="slideInLeft">
@@ -185,14 +185,14 @@
     			 	 {{ form.csrf }}
     				 <div class="form-row">
     				 	   <div class="form-group col-md-6">
-    				 	   		<label for="name">{{ form.name.label }}</label>
+    				 	   		{{ form.name.label }}
     				 	   		  {{ form.name(class_="form-control") }}
 						            {% for error in form.name.errors %}
 						            <div class="badge badge-danger">{{ error }}</div>
 						            {% endfor %}
     				 	   </div>
     				 	   <div class="form-group col-md-6">
-    				 	   		<label for="email">{{ form.email.label }}</label>
+    				 	   		{{ form.email.label }}
     				 	   		  {{ form.email(class_="form-control") }}
 						            {% for error in form.email.errors %}
 						            <div class="badge badge-danger">{{ error }}</div>
@@ -201,14 +201,14 @@
     				 </div>
     				 <div class="form-row">
     				 	   <div class="form-group col-md-6">
-    				 	   		<label for="phone">{{ form.phone.label }}</label>
+    				 	   		{{ form.phone.label }}
     				 	   		  {{ form.phone(class_="form-control") }}
 						            {% for error in form.phone.errors %}
 						            <div class="badge badge-danger">{{ error }}</div>
 						            {% endfor %}
     				 	   </div>
     				 	   <div class="form-group col-md-6"> 
-    				 	   		<label for="subject">{{ form.subject.label }}</label>   				 	   		
+    				 	   		{{ form.subject.label }}  				 	   		
     				 	   		  {{ form.subject(class_="form-control") }}
 						            {% for error in form.subject.errors %}
 						            <div class="badge badge-danger">{{ error }}</div>
@@ -216,19 +216,26 @@
     				 	   </div>
     				 </div>
     				 <div class="form-row">
-    				 	   		<label for="message">{{ form.message.label}}</label>
+    				 		{{ form.selection.label(class="mr-3")}} 				 	   		
+    				 	   		  {{ form.selection(class_="form-check form-check-inline select-wolf") }}
+						            {% for error in form.selection.errors %}
+						            <div class="badge badge-danger">{{ error }}</div>
+						            {% endfor %}
+    				 </div>
+    				 <div class="form-row">
+    				 	   		{{ form.message.label}}
     				 	 {{ form.message(class_="form-control") }}
 						            {% for error in form.message.errors %}
 						            <div class="badge badge-danger">{{ error }}</div>
 						            {% endfor %}
     				 </div>
-    				 <div class="form-row mt-4">
-    				 	{{ form.submit(class_="btn btn-primary") }}
+    				 <div class="form-row mt-4">    				 	
     				 	{{form.utm_campaign}}
     				 	{{form.utm_source}}
     				 	{{form.utm_medium}}
     				 	{{form.utm_content}}
     				 	{{form.utm_term}}
+    				 	{{ form.submit(class_="btn btn-primary") }}
     				 </div>
     			</form>
     			</div>

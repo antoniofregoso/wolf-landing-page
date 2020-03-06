@@ -223,3 +223,13 @@ div.st-event-actionContainer li{
 	color: black;
 }
 
+
+.select-wolf {
+	list-style-type:none;
+}
+
+.select-wolf li {
+	margin-right: 20px;
+}
+
+

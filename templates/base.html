@@ -5,8 +5,11 @@
         {% else %}
         <title>landing page</title>
         {% endif %}
-      <link rel="stylesheet" href="static/css/bootstrap.min.css" /> 
-       <!--   <link rel="stylesheet" href="static/css/wolf-theme.css" /> -->
+        {% if theme==True %}
+        	<link rel="stylesheet" href="static/css/wolf-theme.css" />
+        {% else %}
+        	<link rel="stylesheet" href="static/css/bootstrap.min.css" /> 
+        {% endif %}  
         <link rel="stylesheet" href="static/css/all.min.css" />
         <link rel="stylesheet" href="static/css/animate.min.css" />
         <link rel="stylesheet" href="static/css/baguetteBox.css" />
