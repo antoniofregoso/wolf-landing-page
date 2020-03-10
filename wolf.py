@@ -109,4 +109,7 @@ def error():
 def theme():
     theme = bool(app.config['OPTIONS']['wolf_theme'])
     return render_template('theme.html', theme=theme, title='Theme')
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
     
