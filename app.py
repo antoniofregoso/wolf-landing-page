@@ -22,7 +22,7 @@ def index():
     theme = bool(app.config['OPTIONS']['wolf_theme'])
     if form.validate_on_submit():
         return redirect(url_for('gracias'))
-    return render_template('index.html', theme=theme, title='Home', q=qs, form=form)
+    return render_template('index.html', theme=theme, title='Home', q=qs, form=form, ga=app.config['OPTIONS']['google'], fb=app.config['OPTIONS']['facebook'])
 
 @app.route('/gracias', methods=['GET', 'POST'])
 def gracias():
@@ -95,7 +95,7 @@ def gracias():
         else:
             lead['partner_id'] = crm.create_object(app.config['ODOO'],'res.partner', partner)
             lead_id = crm.create_object(app.config['ODOO'],'crm.lead', lead)        
-        return render_template('lead.html', theme=theme, title='Solicitus Enviada', name= form['name'])
+        return render_template('lead.html', theme=theme, title='Gracias', name= form['name'])
        
     else:
         return redirect(url_for('error'))

@@ -68,6 +68,10 @@ header .overlay {
 	display: none;
 
 }
+
+.logo-wolf {
+	display: none;
+}
 	
 .over-wolf a {
 	width: 170px;

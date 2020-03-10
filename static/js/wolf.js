@@ -24,12 +24,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 function wolfNav() {
 	if($('#nav-wolf').hasClass('dock-wolf')){
 		$('#nav-wolf').addClass('over-wolf');
+		$('#logo-wolf').addClass('logo-wolf');
+		$('#logo-wolf-big').removeClass('logo-wolf');
 		$('.nav-wolf').animate({
 			width: '190px'
 		}, 1000);
 		$('#nav-wolf').removeClass('dock-wolf');		
 	} else {
 		$('#nav-wolf').removeClass('over-wolf');
+		$('#logo-wolf').removeClass('logo-wolf');
+		$('#logo-wolf-big').addClass('logo-wolf');
 		$('.nav-wolf').animate({
 			width: '70px'
 		}, 500);

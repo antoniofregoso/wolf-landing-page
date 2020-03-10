@@ -13,7 +13,11 @@
         <link rel="stylesheet" href="static/css/wolf.css" />
     </head>
     <body>
-
+	    {% if title.startswith('Gracias') %}
+	    <script>
+		  fbq('track', 'Lead');
+		</script>
+    {% endif %} 
         {% block content %}{% endblock %}
         
         
