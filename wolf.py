@@ -110,6 +110,10 @@ def theme():
     theme = bool(app.config['OPTIONS']['wolf_theme'])
     return render_template('theme.html', theme=theme, title='Theme')
 
+@app.route('/sitemap.xml')
+def sitemap():
+    return render_template('sitemap.xml', url=app.config['OPTIONS']['url'])
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
     
