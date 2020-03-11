@@ -1,7 +1,7 @@
 <html>
     <head>
         {% if title %}
-        <title>{{ title }} - Wolf Landing Page</title>
+        <title>{{title}}</title>
         {% else %}
         <title>landing page</title>
         {% endif %}
@@ -14,6 +14,28 @@
         <link rel="stylesheet" href="static/css/animate.min.css" />
         <link rel="stylesheet" href="static/css/baguetteBox.css" />
         <link rel="stylesheet" href="static/css/wolf.css" />
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <meta name="generator" content="Wolf Landing Page"/>
+        <meta name="description" content="Los meta tags de HTML codifican información para ser interpretada por el navegador y los buscadores. ¿Sabes cuáles son imprescindibles?"/>
+        <meta name="keywords" content="palabra clave 1, palabra clave 2, palabra clave 3"/>
+        <meta name="author" content="Nombre del autor" />
+        <meta name="copyright" content="Propietario del copyright" />
+        <meta name="robots" content="index"/>
+        <!--  Essential META Tags -->
+		<meta property="og:title" content="{{title}}">
+		<meta property="og:description" content="Offering tour packages for individuals or groups.">
+		<meta property="og:image" content="http://euro-travel-example.com/thumbnail.jpg">
+		<meta property="og:url" content="http://euro-travel-example.com/index.htm">
+		<meta name="twitter:card" content="summary_large_image">
+		<!--  Non-Essential, But Recommended -->
+		<meta property="og:site_name" content="European Travel, Inc.">
+		<meta name="twitter:image:alt" content="Alt text for image">	
+		<!--  Non-Essential, But Required for Analytics -->		
+		<meta property="fb:app_id" content="your_app_id" />
+		<meta name="twitter:site" content="@website-username">
+		
          {% if ga.startswith('UA-') %}
          	<!-- Global site tag (gtag.js) - Google Analytics -->
 			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2396491-23"></script>
