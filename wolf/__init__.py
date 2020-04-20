@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
-from models.odoo import server
-from config import Config    
-from models.forms import LeadForm
-import logging
+from wolf.models.odoo import server
+from wolf.config import Config   
+from wolf.models.forms  import LeadForm
+
 
 app = Flask(__name__)
 app.config.from_object(Config)

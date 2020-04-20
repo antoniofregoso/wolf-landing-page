@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="static/css/all.min.css" />
         <link rel="stylesheet" href="static/css/animate.min.css" />
         <link rel="stylesheet" href="static/css/baguetteBox.css" />
+        <link rel="stylesheet" href="static/css/swiper.min.css" />
         <link rel="stylesheet" href="static/css/wolf.css" />
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -143,10 +144,9 @@
         
         </footer>
         <script src="static/js/jquery-3.4.1.min.js"></script>
-        <script src="static/js/popper.min.js"></script>
-        <script src="static/js/bootstrap.min.js"></script>
         <script src="static/js/baguetteBox.min.js"></script>
-		 <script src="static/js/wolf.js"></script>
+        <script src="static/js/swiper.min.js"></script>
+		<script src="static/js/wolf.js"></script>
 		<script>
 			$(document).ready(function(){
 				$('st-event-actionContainer').launchBtn( { openDuration: 500, closeDuration: 300 } );
@@ -156,38 +156,25 @@
 			});
 			baguetteBox.run('.baguetteBox', {captions: true, overlayBackgroundColor:'rgba(255,255,255,0.5)', fullScreen: true});
 		</script>
-		<script type='application/ld+json'> 
-{
-  "@context": "http://www.schema.org",
-  "@type": "LocalBusiness",
-  "id": "www.conco.com.mx/",
-  "hasMap": "https://goo.gl/maps/qfUrGbBbJK7DyUvY6",
-  "name": "Conco",
-  "logo" : "https://www.conco.com.mx/static/img/logo_big.png",
-  "image" : "https://www.conco.com.mx/static/img/conco.jpg",
-  "url": "https://www.conco.com.mx/",
-  "description": "Coworking",
-  "priceRange" : "$000 - $000",
-  "telephone": "568944555",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Carretera Picacho Ajusco 533",
-    "addressLocality": "Ciudad de México",
-    "addressRegion": "Tlalpan",
-    "postalCode": "14240",
-    "addressCountry": "México"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "19.296168",
-    "longitude": "-99.216273"
-  },
-  "openingHours": "Mo, Tu, We, Th, Fr 08:00-21:00 Sa 09:00-16:00 Su 09:00-12:00",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "568944555"
-  }
-}
- </script>
+		  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows : true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
+
 </body>
 </html>
