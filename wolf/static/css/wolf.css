@@ -50,7 +50,7 @@ header .overlay {
 
 
 .nav-wolf {
-	margin-top: 20%; 
+	margin-top: 10%; 
 	margin-left: 10px;
 	position:fixed; 
 	border-radius:15px;
@@ -241,6 +241,8 @@ div.st-event-actionContainer li{
       width: 100%;
       padding-top: 50px;
       padding-bottom: 50px;
+      height: 580px;
+      
     }
 
 
@@ -248,9 +250,16 @@ div.st-event-actionContainer li{
       background-position: center;
       background-size: cover;
       width: 300px !important;
-      height: 450px !important;
+      height: 470px !important;
 
     }
+    
+.swiper-img {
+	height: 200px;
+	width: 300px;
+}
 
-
+.footer-wolf {
+	background-color: #1B4079;
+}
 
