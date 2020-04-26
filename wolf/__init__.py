@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
-from wolf.models.odoo import server
 from wolf.config import Config   
 from wolf.models.forms  import LeadForm
 
@@ -29,72 +28,6 @@ def gracias():
     theme = bool(app.config['OPTIONS']['wolf_theme'])
     if request.method == 'POST':
         form = request.form
-        lead = {}    
-        crm = server()
-        utm = crm.get_utm(app.config['ODOO']) 
-        #Check campaing 
-        try: 
-            check = crm.check_utm(form['utm_campaign'], utm['campaign'] )[0]
-            lead['campaign_id'] = check['id']
-            app.logger.warning('testing warning log')
-        except:
-            pass
-        #Check source
-        try: 
-            check = crm.check_utm(form['utm_source'] , utm['source'] )[0]
-            lead['source_id'] = check['id']
-        except:
-            pass
-        #Check medium
-        try: 
-            check = crm.check_utm(form['utm_medium'] , utm['medium'] )[0]
-            lead['medium_id'] = check['id']
-        except:
-            pass
-        #Check content
-        try: 
-            check = crm.check_utm(form['utm_content'] , utm['content'] )[0]
-            lead['content_id'] = check['id']
-        except:
-            pass
-        #Check term
-        try: 
-            check = crm.check_utm(form['utm_term'] , utm['term'] )[0]
-            lead['term_id'] = check['id']
-        except:
-            pass
-        #Add team_id
-        try:
-            lead['team_id'] = int(app.config['CRM']['team_id'])
-        except:
-            pass
-        lead['description'] = form['message']
-        lead['name'] = form['subject']
-        lead['type'] = 'opportunity'
-        lead['probability'] = app.config['CRM']['probability']
-        i = 0
-        j = 0
-        description = "Interesado en: \n"
-        for item in  form.getlist('selection'):
-            for option in app.config['SELECTION']:
-                if option[0]==item:
-                    description += option[1] + '\n'
-            i +=  float(item)
-            j += 1
-        lead['planned_revenue'] = i/j
-        lead['description'] = description
-        partner = {}
-        partner['name'] = form['name']
-        partner['email'] = form['email']
-        partner['phone'] = form['phone']
-        partner_id = crm.check_contact(app.config['ODOO'], partner)
-        
-        if partner_id > 0:
-            lead['partner_id'] = partner_id
-            lead_id = crm.create_object(app.config['ODOO'],'crm.lead', lead)
-        else:
-            lead['partner_id'] = crm.create_object(app.config['ODOO'],'res.partner', partner)
-            lead_id = crm.create_object(app.config['ODOO'],'crm.lead', lead)        
         return render_template('lead.html', theme=theme, title='Gracias', name= form['name'])
        
     else:
