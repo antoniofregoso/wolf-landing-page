@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
 import configparser
-import xmlrpc.client
 
 class Config(object):
     config = configparser.ConfigParser() 
