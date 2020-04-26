@@ -4,7 +4,7 @@ from wolf.models.forms  import LeadForm
 
 
 app = Flask(__name__)
-app.config.from_object(Config)
+#app.config.from_object(Config)
 
 
 @app.route('/')
