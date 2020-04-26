@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from flask import Flask, render_template, request, flash, redirect, url_for
 from wolf.models.odoo import server
 from wolf.config import Config   

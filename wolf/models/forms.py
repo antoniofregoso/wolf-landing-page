@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from flask_wtf import FlaskForm, RecaptchaField
 from wtforms import StringField, SubmitField, HiddenField, SelectMultipleField
 from wtforms.validators import DataRequired, Email
