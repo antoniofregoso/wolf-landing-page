@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
-from wolf.config import Config   
+#from wolf.config import Config   
 from wolf.models.forms  import LeadForm
 
 
@@ -18,14 +18,14 @@ def index():
     form.utm_medium.data=  request.args.get('utm_medium')
     form.utm_content.data = request.args.get('utm_content')
     form.utm_term.data = request.args.get('utm_term')
-    theme = bool(app.config['OPTIONS']['wolf_theme'])
+    theme = False #bool(app.config['OPTIONS']['wolf_theme'])
     if form.validate_on_submit():
         return redirect(url_for('gracias'))
     return render_template('index.html', theme=theme, title='Home', q=qs, form=form, ga=app.config['OPTIONS']['google'], fb=app.config['OPTIONS']['facebook'])
 
 @app.route('/gracias', methods=['GET', 'POST'])
 def gracias():
-    theme = bool(app.config['OPTIONS']['wolf_theme'])
+    theme = False #bool(app.config['OPTIONS']['wolf_theme'])
     if request.method == 'POST':
         form = request.form
         return render_template('lead.html', theme=theme, title='Gracias', name= form['name'])
