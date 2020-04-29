@@ -107,38 +107,7 @@
 				<div class="st-event-button-main"><i class="fa fa-bars" aria-hidden="true"></i></div>
 			</div>
         </div>  
-        <footer>
-        <div class="container-fluid footer-wolf text-white">
-        	<div class="row pt-5">
-        		<div class="col-12 col-md-4 pt-4">
-        		<img src="/static/img/torreblanca.svg" width="200"  alt="{{title}}">
-        			</div>
-        		<div class="col-12 col-md-4 pt-4">
-        			 <h5>Contacte con nosotros</h5>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-phone-square"></i> <span class="o_force_ltr">+55 6801 8701</span></li>
-                                <li><i class="fas fa-envelope-square"></i>  <span>info@grupotorreblanca.com</span></li>
-                            </ul>
-                            <p class="text-center">
-                                
-                                <a class="btn btn-sm btn-link text-light" href="https://twitter.com/aererto"><i class="fab fa-2x fa-facebook-square"></i></a>
-                                <a class="btn btn-sm btn-link text-light" href="https://www.linkedin.com/in/erter/"><i class="fab fa-2x fa-twitter-square"></i></a>
-								<a class="btn btn-sm btn-link text-light" href="https://github.com/aweettee"><i class="fab fa-2x fa-instagram-square"></i></a>
-								<a class="btn btn-sm btn-link text-light" href="https://github.com/aweettee"><i class="fab fa-2x fa-whatsapp-square"></i></a>
-                            </p>
-        		</div>
-        		<div class="col-12 col-md-4 pt-4">
-        			 <h5>Representante de:</h5>
-        			 <img class="img-fluid mt4" width="200px" src="static/img/pru-logo.svg" alt="">
-        		
-        		</div>
-        	</div>
-        	<div class="row pl-4">
-        		<a class="text-light" href="url">Política de privacidad</a>
-        	</div>
-        </div>
-        
-        </footer>
+	{% block footer %}{% endblock %}
         <script src="static/js/jquery-3.4.1.min.js"></script>
         <script src="static/js/baguetteBox.min.js"></script>
         <script src="static/js/swiper.min.js"></script>
