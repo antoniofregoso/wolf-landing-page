@@ -3,6 +3,7 @@ from wolf.config import Config
 from wolf.models.forms  import LeadForm
 
 
+
 app = Flask(__name__)
 app.config.from_object(Config)
 
