@@ -12,7 +12,7 @@ class MultiCheckboxField(SelectMultipleField):
 class LeadForm(FlaskForm):
     name = StringField('Nombre', validators=[DataRequired(message='Se requiere tu nombre')])
     email = StringField('Correo', validators=[DataRequired(message='Se requiere tu correo'), Email(message='Puto')])
-    phone = StringField('Teléfono', validators=[DataRequired(message='Se requiere tu teléfono')])
+    phone = StringField(u'Teléfono', validators=[DataRequired(message='Se requiere tu teléfono')])
     selection = MultiCheckboxField('Me interesa', validators=[DataRequired(message='Seleccione')])
     subject = StringField('Asunto', validators=[DataRequired(message='Se requiere un asunto')])
     message = StringField('Mensaje', widget=TextArea(), validators=[DataRequired(message='Se requiere tu mensaje')])
