@@ -1,0 +1,41 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{title}}</title>
+        {% else %}
+        <title>landing page</title>
+        {% endif %}
+        {% if theme==True %}
+        	<link rel="stylesheet" href="static/css/wolf-theme.css" />
+        {% else %}
+        	<link rel="stylesheet" href="static/css/bootstrap.min.css" /> 
+        {% endif %}  
+        <link rel="stylesheet" href="static/css/all.min.css" />
+        <link rel="stylesheet" href="static/css/animate.min.css" />
+        <link rel="stylesheet" href="static/css/baguetteBox.css" />
+        <link rel="stylesheet" href="static/css/swiper.min.css" />
+        <link rel="stylesheet" href="static/css/wolf.css" />
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <meta name="generator" content="Wolf Landing Page"/>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <meta name="description" content="Los meta tags de HTML codifican información para ser interpretada por el navegador y los buscadores. ¿Sabes cuáles son imprescindibles?"/>
+        <meta name="keywords" content="palabra clave 1, palabra clave 2, palabra clave 3"/>
+        <meta name="author" content="Nombre del autor" />
+        <meta name="copyright" content="Propietario del copyright" />
+        <meta name="robots" content="index"/>
+        <!--  Essential META Tags -->
+		
+    </head>
+    <body>
+
+        {% block content %}{% endblock %}
+        
+ 	
+        <script src="static/js/jquery-3.4.1.min.js"></script>
+        <script src="static/js/baguetteBox.min.js"></script>
+        <script src="static/js/swiper.min.js"></script>
+		<script src="static/js/wolf.js"></script>
+</body>
+</html>
