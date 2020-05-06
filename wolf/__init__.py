@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, flash, redirect, url_for
 from wolf.config import Config   
 from wolf.models.forms  import LeadForm
 
-import os.path
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -48,11 +47,7 @@ def theme():
 def sitemap():
     return render_template('sitemap.xml', url=app.config['OPTIONS']['url'])
 
-@app.route('/test')
-def test():
-    x = os.path.abspath('wolf.ini')
-    
-    return x
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
