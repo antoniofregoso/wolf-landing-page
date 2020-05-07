@@ -1,6 +1,6 @@
 
     <section id="contacto">
-    	<div class="container  mt-5">
+    	<div class="container  my-5">
     			<h2 class="text-center" data-animation="zoomIn">Quiero saber mas</h2>
     			<h4 class="text-center" >Te ofresco platicar sobre protección financiera para tí y tu familia.</h4>
     			<p class="text-center mb-4"><strong>Cuidando tu salud</strong> puedo darte una asesoría por videollamada o teléfono.</p>
@@ -41,13 +41,6 @@
     				 	   </div>
     				 </div>
     				 <div class="form-row">
-    				 		{{ form.selection.label(class="mr-3")}} 				 	   		
-    				 	   		  {{ form.selection(class_="form-check form-check-inline select-wolf") }}
-						            {% for error in form.selection.errors %}
-						            <div class="badge badge-danger">{{ error }}</div>
-						            {% endfor %}
-    				 </div>
-    				 <div class="form-row">
     				 	   		{{ form.message.label}}
     				 	 {{ form.message(class_="form-control") }}
 						            {% for error in form.message.errors %}
@@ -66,35 +59,36 @@
     			</div>
     			<div class="col-12 col-lg-4"  data-animation="slideInRight">
     				<div class="media">
-    					<span class="mr-3" ><i class="fas fa-2x fa-map-marker-alt"></i></span>
+    					<span class="mr-3" ><i class="text-info fas fa-2x fa-map-marker-alt"></i></span>
     					  <div class="media-body">
     					  	 <h5 class="mt-0">Dirección</h5>
     					  	 <address>
-							  ---<br>
-							  ---<br>
-							  ---, Ciudad de México
+							  Zona rosa circuito historiadores<br>
+							  Ciudad Satélite<br>
+							  Naucalpan de Juárez, Edo. de México<br>
+							  C. P. 53100
 							</address>
     					  </div>
     				</div>    				
     				<div class="media mt-4">
-    					<span class="mr-3" ><i class="fas fa-2x fa-envelope"></i></span>
+    					<span class="mr-3" ><i class="text-info fas fa-2x fa-envelope"></i></span>
     					  <div class="media-body">
     					  	 <h5 class="mt-0">Correo</h5>
-    					  	 <span>info@grupotorreblanca.com</span>
+    					  	 <a href="mailto:lyvilli@grupotorreblanca.com"><span>lyvilli@grupotorreblanca.com</span></a>
     					  </div>
     				</div>    				
     				<div class="media mt-4">
-    					<span class="mr-3" ><i class="fas fa-2x fa-mobile-alt"></i></span>
+    					<span class="mr-3" ><i class="text-info fas fa-2x fa-mobile-alt"></i></span>
     					  <div class="media-body">
     					  	 <h5 class="mt-0">Teléfono</h5>
-    					  	 <span>55 6801 8701</span>
+    					  	 <a href="tel:15568018701"><span>55 6801 8701</span></a>
     					  </div>
     				</div>    				
     				<div class="media mt-4">
-    					<span class="mr-3" ><i class="fas fa-2x fa-bus"></i></span>
+    					<span class="mr-3" ><i class="text-info fas fa-2x fa-address-card"></i></span>
     					  <div class="media-body">
-    					  	 <h5 class="mt-0">Rutas cercanas</h5>
-    					  	 <span>Ninguna</span>
+    					  	 <h5 class="mt-0">vCard</h5>
+    					  	 <a href="static/media/LydiaVillicaña.vcf"><span>Descargar</span></a>
     					  </div>
     				</div>
     			

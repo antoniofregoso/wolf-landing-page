@@ -21,7 +21,7 @@ def index():
     theme = bool(app.config['OPTIONS']['wolf_theme'])
     if form.validate_on_submit():
         return redirect(url_for('gracias'))
-    return render_template('index.html', theme=theme, title='Home', q=qs, form=form, ga=app.config['OPTIONS']['google'], fb=app.config['OPTIONS']['facebook'])
+    return render_template('index.html', theme=theme, title='Grupo Torreblanca|Seguros', q=qs, form=form, ga=app.config['OPTIONS']['google'], fb=app.config['OPTIONS']['facebook'])
 
 @app.route('/gracias', methods=['GET', 'POST'])
 def gracias():
@@ -38,10 +38,7 @@ def error():
     theme = bool(app.config['OPTIONS']['wolf_theme'])
     return render_template('error.html', theme=theme, title='Error')
 
-@app.route('/theme')
-def theme():
-    theme = bool(app.config['OPTIONS']['wolf_theme'])
-    return render_template('theme.html', theme=theme, title='Theme')
+
 
 @app.route('/sitemap.xml')
 def sitemap():
