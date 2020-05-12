@@ -104,6 +104,12 @@ header .overlay {
 	float: right !important;
 }
 
+.right-whatsapp {
+	bottom: 30%;
+	right: 2em;
+	float: right !important;
+}
+
 .left-bottom {
 	bottom: 2em;
 	left: 2em;
