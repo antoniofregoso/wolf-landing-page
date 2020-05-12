@@ -71,6 +71,30 @@
           {% endif %}       
     </head>
     <body>
+    <!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v7.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your customer chat code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="107413987638410"
+  theme_color="#2c76fc">
+      </div>
     <nav class="navbar nav-wolf d-none d-md-block">
 	    <div class="dock-wolf" id="nav-wolf">
 	    	<a class="navbar-brand" id="logo-wolf" href="#">
