@@ -136,6 +136,7 @@
         <script src="static/js/baguetteBox.min.js"></script>
         <script src="static/js/swiper.min.js"></script>
 		<script src="static/js/wolf.js"></script>
+		<script src="static/js/floating-wpp.js"></script>
 		<script>
 			$(document).ready(function(){
 				$('st-event-actionContainer').launchBtn( { openDuration: 500, closeDuration: 300 } );
@@ -165,6 +166,16 @@
       },
     });
   </script>
-
+<script type="text/javascript">
+    $(function () {
+        $('#myButton').floatingWhatsApp({
+            phone: '5215568018701',
+            headerTitle: 'Atencion a clientes',
+            popupMessage: '¡Hola! ¿Como puedo ayudarte?',
+            message: "Me interesan tus servicios",
+            showPopup: true
+        });
+    });
+</script>
 </body>
 </html>
