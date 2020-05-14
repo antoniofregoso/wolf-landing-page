@@ -3,7 +3,7 @@
         {% if title %}
         <title>{{title}}</title>
         {% else %}
-        <title>landing page</title>
+        <title>Grupo Torreblanca|Seguros</title>
         {% endif %}
         {% if theme==True %}
         	<link rel="stylesheet" href="static/css/wolf-theme.css" />
@@ -20,22 +20,186 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
         <meta name="generator" content="Wolf Landing Page"/>
         <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-        <meta name="description" content="Los meta tags de HTML codifican información para ser interpretada por el navegador y los buscadores. ¿Sabes cuáles son imprescindibles?"/>
-        <meta name="keywords" content="palabra clave 1, palabra clave 2, palabra clave 3"/>
-        <meta name="author" content="Nombre del autor" />
+        <meta name="description" content="Protejemos tu patrimonio y aseguramos tu presente y futuro financiero. "/>
+        <meta name="keywords" content="Seguros, Retiro, Gastos Médicos"/>
+        <meta name="author" content="Antonio Fregoso" />
         <meta name="copyright" content="Propietario del copyright" />
         <meta name="robots" content="index"/>
         <!--  Essential META Tags -->
+		<meta property="og:title" content="{{title}}">
+		<meta property="og:description" content="Protejemos tu patrimonio y aseguramos tu presente y futuro financiero.">
+		<meta property="og:image" content="https://www.grupotorreblanca.com.mx/static/img/poster.png">
+		<meta property="og:url" content="https://www.grupotorreblanca.com.mx/">
+		<meta name="twitter:card" content="summary_large_image">
+		<!--  Non-Essential, But Recommended -->
+		<meta property="og:site_name" content="Grupo Torreblanca">
+		<meta name="twitter:image:alt" content="Seguros">	
+		<!--  Non-Essential, But Required for Analytics -->		
+		<meta property="fb:app_id" content="your_app_id" />
+		<meta name="twitter:site" content="@website-username">
+		<script type='application/ld+json'> 
+{
+  "@context": "http://www.schema.org",
+  "@type": "InsuranceAgency",
+  "name": "Grupo Torreblanca",
+  "url": "https://www.grupotorreblanca.com.mx/",
+  "image": "https://www.grupotorreblanca.com.mx/static/img/torreblanca.png",
+  "description": "Protejemos tu patrimonio y aseguramos tu presente y futuro financiero",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Zona rosa circuito historiadores",
+    "addressLocality": "Ciudad Satélite",
+    "addressRegion": "Naucalpan de Juárez, Edo. de México",
+    "postalCode": "53100",
+    "addressCountry": "Mexico"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "19.505585",
+    "longitude": "-99.226402"
+  },
+  "openingHours": "Mo, Tu, We, Th, Fr 09:00-19:00 Sa 09:00-14:00"
+}
+ </script>
+		 <script src="https://kit.fontawesome.com/b45a06c51a.js" crossorigin="anonymous"></script>
 		
+         {% if ga.startswith('UA-') %}
+         	<!-- Global site tag (gtag.js) - Google Analytics -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2396491-23"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+			
+			  gtag({{"'config', '"|safe + ga + "'"|safe}});
+			</script>
+         {% endif %}  
+         {% if fb %}
+	         <!-- Facebook Pixel Code -->
+			<script>
+			  !function(f,b,e,v,n,t,s)
+			  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+			  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+			  n.queue=[];t=b.createElement(e);t.async=!0;
+			  t.src=v;s=b.getElementsByTagName(e)[0];
+			  s.parentNode.insertBefore(t,s)}(window, document,'script',
+			  'https://connect.facebook.net/en_US/fbevents.js');
+			  fbq({{"'init', '"|safe + fb + "'"|safe}});
+			  fbq('track', 'PageView');
+			</script>
+			<noscript><img height="1" width="1" style="display:none"
+			  src={{'"https://www.facebook.com/tr?id='|safe + fb + '&ev=PageView&noscript=1"'|safe}}
+			/></noscript>
+			<!-- End Facebook Pixel Code -->		         
+          {% endif %}       
     </head>
     <body>
+    <!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v7.0'
+          });
+        };
 
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your customer chat code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="107413987638410"
+  theme_color="#2c76fc">
+      </div>
+    <nav class="navbar nav-wolf d-none d-md-block">
+	    <div class="dock-wolf" id="nav-wolf">
+	    	<a class="navbar-brand" id="logo-wolf" href="#">
+    			<img src="static/img/torreblanca40x40.png" width="40" height="40" alt="{{title}}">
+  			</a>
+  			<a class="navbar-brand logo-wolf"  id="logo-wolf-big" href="#">
+    			<img src= "static/img/torreblanca_menu.png" width="150" height="40" alt="{{title}}">
+  			</a>	    
+	    	<ul class="navbar-nav">
+	    		<li class="nav-item"><a class="nav-link" href="https://www.grupotorreblanca.com.mx/#start"><i class="fas fa-2x fa-home item-wolf"></i> <span >Inicio</span></a></li>
+	    		<li class="nav-item"><a class="nav-link"  href="https://www.grupotorreblanca.com.mx/#presentacion"><i class="fab fa-2x fa-black-tie item-wolf"></i><span > Presentación</span></a></li>
+	    		<li class="nav-item"><a class="nav-link"  href="https://www.grupotorreblanca.com.mx/#asesor"><i class="fas fa-2x fa-user-circle item-wolf"></i><span > Asesor</span></a></li>
+		    		<li class="nav-item"><a class="nav-link"  href="https://www.grupotorreblanca.com.mx/#timeline"><i class="fas fa-2x fa-stream item-wolf"></i><span > Necesidades</span></a></li>
+	    		<li class="nav-item"><a class="nav-link"  href="https://www.grupotorreblanca.com.mx/#planes"><i class="fab fa-2x fa-audible item-wolf"></i><span > Soluciones</span></a></li>
+	    		<li class="nav-item"><a class="nav-link"  href="https://www.grupotorreblanca.com.mx/#contacto"><i class="fas fa-2x fa-envelope item-wolf"></i><span> Contacto</span></a></li>
+	    	</ul>
+	    </div>
+    </nav>
         {% block content %}{% endblock %}
         
- 	
+        
+        <div class="st-event-actionContainer d-block d-md-none left-bottom">
+        	<div class="st-event-panel">
+        		<ul class="navbar-nav p-2">
+		    		<li class="nav-item"><a class="nav-link" href="https://www.grupotorreblanca.com.mx/#start"><i class="fas fa-2x fa-home item-wolf"></i> <span >Inicio</span></a></li>
+		    		<li class="nav-item"><a class="nav-link"  href="https://www.grupotorreblanca.com.mx/#presentacion"><i class="fab fa-2x fa-black-tie item-wolf"></i><span > Presentación</span></a></li>
+		    		<li class="nav-item"><a class="nav-link"  href="https://www.grupotorreblanca.com.mx/#asesor"><i class="fas fa-2x fa-user-circle item-wolf"></i><span > Asesor</span></a></li>
+		    		<li class="nav-item"><a class="nav-link"  href="https://www.grupotorreblanca.com.mx/#timeline"><i class="fas fa-2x fa-stream item-wolf"></i><span > Necesidades</span></a></li>
+		    		<li class="nav-item"><a class="nav-link"  href="https://www.grupotorreblanca.com.mx/#planes"><i class="fab fa-2x fa-audible item-wolf"></i><span > Soluciones</span></a></li>
+		    		<li class="nav-item"><a class="nav-link"  href="https://www.grupotorreblanca.com.mx/#contacto"><i class="fas fa-2x fa-envelope item-wolf"></i><span> Contacto</span></a></li>
+	    	</ul>    		
+        	</div>
+        	<div class="st-event-btn-container right-bottom bg-primary">
+				<div class="st-event-button-main"><i class="fa fa-bars" aria-hidden="true"></i></div>
+			</div>
+        </div>  
+	{% block footer %}{% endblock %}
         <script src="static/js/jquery-3.4.1.min.js"></script>
         <script src="static/js/baguetteBox.min.js"></script>
         <script src="static/js/swiper.min.js"></script>
 		<script src="static/js/wolf.js"></script>
+		<script src="static/js/floating-wpp.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('st-event-actionContainer').launchBtn( { openDuration: 500, closeDuration: 300 } );
+			});
+			$("#nav-wolf").click(function(){
+				wolfNav();
+			});
+			baguetteBox.run('.baguetteBox', {captions: true, overlayBackgroundColor:'rgba(255,255,255,0.5)', fullScreen: true});
+		</script>
+		  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      initialSlide: 3,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows : true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
+<script type="text/javascript">
+    $(function () {
+        $('#myButton').floatingWhatsApp({
+            phone: '5215568018701',
+            headerTitle: 'Atencion a clientes',
+            popupMessage: '¡Hola! ¿Como puedo ayudarte?',
+            message: "Me interesan tus servicios",
+            showPopup: true
+        });
+    });
+</script>
 </body>
 </html>

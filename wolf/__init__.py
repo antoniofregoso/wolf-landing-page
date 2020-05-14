@@ -38,6 +38,11 @@ def error():
     theme = bool(app.config['OPTIONS']['wolf_theme'])
     return render_template('error.html', theme=theme, title='Error')
 
+@app.route('/politica-privacidad')
+def politicaPrivacidad():
+    theme = bool(app.config['OPTIONS']['wolf_theme'])
+    return render_template('privacidad.html', theme=theme, title='Política de Privacidad', ga=app.config['OPTIONS']['google'], fb=app.config['OPTIONS']['facebook'])
+
 
 
 @app.route('/sitemap.xml')
