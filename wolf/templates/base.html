@@ -46,7 +46,7 @@
   "image": "https://www.grupotorreblanca.com.mx/static/img/torreblanca.png",
   "description": "Protejemos tu patrimonio y aseguramos tu presente y futuro financiero",
   "telephone": "5568018701",
-  "email": "lidyvilli@geupotorreblanca.com.mx",
+  "email": "lyvilli@grupotorreblanca.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Zona rosa circuito historiadores",
@@ -67,7 +67,7 @@
 		
          {% if ga.startswith('UA-') %}
          	<!-- Global site tag (gtag.js) - Google Analytics -->
-			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2396491-23"></script>
+			<script async src="https://www.googletagmanager.com/gtag/js?id={{ga}}"></script>
 			<script>
 			  window.dataLayer = window.dataLayer || [];
 			  function gtag(){dataLayer.push(arguments);}
@@ -142,7 +142,7 @@
         {% block content %}{% endblock %}
         
         
-        <div class="st-event-actionContainer d-block d-md-none left-bottom">
+        <div class="st-event-actionContainer d-block d-md-none left-bottom">    
         	<div class="st-event-panel">
         		<ul class="navbar-nav p-2">
 		    		<li class="nav-item"><a class="nav-link" href="#start"><i class="fas fa-2x fa-home item-wolf"></i> <span >Inicio</span></a></li>
@@ -153,10 +153,11 @@
 		    		<li class="nav-item"><a class="nav-link"  href="#contacto"><i class="fas fa-2x fa-envelope item-wolf"></i><span> Contacto</span></a></li>
 	    	</ul>    		
         	</div>
-        	<div class="st-event-btn-container right-bottom bg-primary">
+        	<div class="st-event-btn-container left-bottom bg-primary">
 				<div class="st-event-button-main"><i class="fa fa-bars" aria-hidden="true"></i></div>
-			</div>
+			</div>			
         </div>  
+        
 	{% block footer %}{% endblock %}
         <script src="static/js/jquery-3.4.1.min.js"></script>
         <script src="static/js/baguetteBox.min.js"></script>
@@ -170,7 +171,6 @@
 			$("#nav-wolf").click(function(){
 				wolfNav();
 			});
-			baguetteBox.run('.baguetteBox', {captions: true, overlayBackgroundColor:'rgba(255,255,255,0.5)', fullScreen: true});
 		</script>
 		  <!-- Initialize Swiper -->
   <script>
